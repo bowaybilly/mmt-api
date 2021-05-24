@@ -5,10 +5,11 @@
 If I had more time the changes I might make;
 
 1. Specifications:  
-   I will allow specification to provide for unit testing the code.
+    Api should be protected by either a Json web token JWT or two factor authentication to prevent unathourised access.
+    Specification should explicitly require handling errors gracefully and return standard error codes.
 2. Implementation:  
-   I will use any of the design patterns to implement the way I query data from the Customer Api. I will use the Repository pattern
-   as I feel the database is to close to the Api. The layer of abstraction will give me more control in unit testing as wll.
+   Implementation of api should be fully restful i.e Use nouns instead of verbs in endpoint paths, allow for filtering and etc.
+   Api should also allow for version. This allows the api to evolve with the business
 
 ## Before code can be deployed to production environment:
 
