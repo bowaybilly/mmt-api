@@ -1,6 +1,6 @@
 # MMT Api specification
 
-## mmt api
+## Recommendations
 
 If I had more time the changes I might make;
 
