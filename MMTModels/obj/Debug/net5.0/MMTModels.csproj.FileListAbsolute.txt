@@ -22,3 +22,15 @@ C:\Users\BobbieA\Documents\Test work\mmt\MMTModels\obj\Debug\net5.0\MMTModels.cs
 C:\Users\BobbieA\Documents\Test work\mmt\MMTModels\obj\Debug\net5.0\MMTModels.dll
 C:\Users\BobbieA\Documents\Test work\mmt\MMTModels\obj\Debug\net5.0\ref\MMTModels.dll
 C:\Users\BobbieA\Documents\Test work\mmt\MMTModels\obj\Debug\net5.0\MMTModels.pdb
+D:\test\mmt-api\MMTModels\bin\Debug\net5.0\MMTModels.deps.json
+D:\test\mmt-api\MMTModels\bin\Debug\net5.0\MMTModels.dll
+D:\test\mmt-api\MMTModels\bin\Debug\net5.0\ref\MMTModels.dll
+D:\test\mmt-api\MMTModels\bin\Debug\net5.0\MMTModels.pdb
+D:\test\mmt-api\MMTModels\obj\Debug\net5.0\MMTModels.csprojAssemblyReference.cache
+D:\test\mmt-api\MMTModels\obj\Debug\net5.0\MMTModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\test\mmt-api\MMTModels\obj\Debug\net5.0\MMTModels.AssemblyInfoInputs.cache
+D:\test\mmt-api\MMTModels\obj\Debug\net5.0\MMTModels.AssemblyInfo.cs
+D:\test\mmt-api\MMTModels\obj\Debug\net5.0\MMTModels.csproj.CoreCompileInputs.cache
+D:\test\mmt-api\MMTModels\obj\Debug\net5.0\MMTModels.dll
+D:\test\mmt-api\MMTModels\obj\Debug\net5.0\ref\MMTModels.dll
+D:\test\mmt-api\MMTModels\obj\Debug\net5.0\MMTModels.pdb

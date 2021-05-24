@@ -31,7 +31,7 @@ namespace MMTApi.Services
                 try
                 {
                     //read token from configuration file 
-                    var token = configuration.GetSection("ApiToken");
+                    var token = configuration.GetSection("ApiToken").Value;
                     // form url for getting customer information
                     string customerUrl = $"{token}&email={customerDTO.Email}";
                     //HttpClient can be injected in as a service via  the services.AddHttpClient() in startup configureServices method

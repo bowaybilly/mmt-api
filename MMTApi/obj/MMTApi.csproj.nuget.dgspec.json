@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\BobbieA\\Documents\\Test work\\mmt\\MMTApi\\MMTApi.csproj": {}
+    "D:\\test\\mmt-api\\MMTApi\\MMTApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\BobbieA\\Documents\\Test work\\mmt\\MMTApi\\MMTApi.csproj": {
+    "D:\\test\\mmt-api\\MMTApi\\MMTApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BobbieA\\Documents\\Test work\\mmt\\MMTApi\\MMTApi.csproj",
+        "projectUniqueName": "D:\\test\\mmt-api\\MMTApi\\MMTApi.csproj",
         "projectName": "MMTApi",
-        "projectPath": "C:\\Users\\BobbieA\\Documents\\Test work\\mmt\\MMTApi\\MMTApi.csproj",
-        "packagesPath": "C:\\Users\\BobbieA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BobbieA\\Documents\\Test work\\mmt\\MMTApi\\obj\\",
+        "projectPath": "D:\\test\\mmt-api\\MMTApi\\MMTApi.csproj",
+        "packagesPath": "C:\\Users\\antho\\.nuget\\packages\\",
+        "outputPath": "D:\\test\\mmt-api\\MMTApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\BobbieA\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\antho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -28,8 +32,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\BobbieA\\Documents\\Test work\\mmt\\MMTModels\\MMTModels.csproj": {
-                "projectPath": "C:\\Users\\BobbieA\\Documents\\Test work\\mmt\\MMTModels\\MMTModels.csproj"
+              "D:\\test\\mmt-api\\MMTModels\\MMTModels.csproj": {
+                "projectPath": "D:\\test\\mmt-api\\MMTModels\\MMTModels.csproj"
               }
             }
           }
@@ -83,18 +87,22 @@
         }
       }
     },
-    "C:\\Users\\BobbieA\\Documents\\Test work\\mmt\\MMTModels\\MMTModels.csproj": {
+    "D:\\test\\mmt-api\\MMTModels\\MMTModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BobbieA\\Documents\\Test work\\mmt\\MMTModels\\MMTModels.csproj",
+        "projectUniqueName": "D:\\test\\mmt-api\\MMTModels\\MMTModels.csproj",
         "projectName": "MMTModels",
-        "projectPath": "C:\\Users\\BobbieA\\Documents\\Test work\\mmt\\MMTModels\\MMTModels.csproj",
-        "packagesPath": "C:\\Users\\BobbieA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BobbieA\\Documents\\Test work\\mmt\\MMTModels\\obj\\",
+        "projectPath": "D:\\test\\mmt-api\\MMTModels\\MMTModels.csproj",
+        "packagesPath": "C:\\Users\\antho\\.nuget\\packages\\",
+        "outputPath": "D:\\test\\mmt-api\\MMTModels\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\BobbieA\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\antho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"

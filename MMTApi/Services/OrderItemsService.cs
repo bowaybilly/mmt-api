@@ -16,21 +16,21 @@ namespace MMTApi.Services
         {
             this.logger = logger;
         }
-        public async Task<OrderitemDTO[]> GetOrderItemsAsync(int orderID)
+        public async Task<OrderitemDTO[]> GetOrderItemsAsync(Order order)
         {
             return await Task.Run(() =>
             {
                 using (var ctx = new DataContext())
                 {
                     this.logger.LogInformation("Get order items called");
-                    var orderItems = ctx.OrderItems.AsEnumerable().Where(x => x.OrderID == orderID).Select(x => new OrderitemDTO()
+                    var orderItems = ctx.OrderItems.Where(x => x.OrderID == order.OrderID).Select(x => new OrderitemDTO()
                     {
                         PriceEach = x.Price,
                         Quantity = x.Quantity,
                         //Products can be fetched from a ProductService class
                         Product = ctx.Products
                          .Where(y => y.ProductID == x.ProductID)
-                         .Select(y => y.ProductName.Contains("contains a gift") ? "Gift" : y.ProductName)
+                         .Select(y => order.ContainsGift ? "Gift" : y.ProductName)
                          .FirstOrDefault()
                     }).ToArray();
                     return orderItems;

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QyzQsagi+Ryaz7BOOhQxc0iqX6zH7uobkMsk/oDkSnvrLRx2DQsARLX5OYGH17NEO7g891MvdSsUpL2Ae2CT5w==",
+  "dgSpecHash": "1uZW78V/t1zPSE+ybZRo6vF2OEhlJkVzZZhGrFAhdjO59w4YOJE47oQsYYCKt1/Xxc7zG30mrRfZFDTg2tWFdg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\BobbieA\\Documents\\Test work\\mmt\\MMTModels\\MMTModels.csproj",
+  "projectFilePath": "D:\\test\\mmt-api\\MMTModels\\MMTModels.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

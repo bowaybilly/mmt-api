@@ -56,7 +56,7 @@ namespace MMTApi.Controllers
                         Order = null
                     });
                     //get order items can  be fetched from an OrderItemsService class
-                    var orderItems = await orderItemsService.GetOrderItemsAsync(order.OrderID);
+                    var orderItems = await orderItemsService.GetOrderItemsAsync(order);
                     
                     var oderDeliverDto = new OrderDeliveryDTO()
                     {
