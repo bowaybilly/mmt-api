@@ -29,12 +29,13 @@ namespace MMTApi
         public void ConfigureServices(IServiceCollection services)
         {
             DataContext.ConnectionString=Configuration.GetConnectionString("DefaultConnection");
-           
+            
             services.AddSingleton<DataContext>();
             services.AddSingleton<DeliveryService>();
             services.AddSingleton<CustomerService>();
             services.AddSingleton<OrderItemsService>();
             services.AddSingleton<ProductService>();
+            services.AddSingleton<OrderService>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
