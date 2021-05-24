@@ -18,13 +18,13 @@ namespace MMTModels
         public string Postcode { get; set; }
         public string PreferredLanguage { get; set; }
     }
-    public class CustomerResponseDTO
+    public class CustomerOrderResponseDTO
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
        
     }
-    public class CustomerRequestDTO
+    public class CustomerOrderRequestDTO
     {
         
         public string Email { get; set; }

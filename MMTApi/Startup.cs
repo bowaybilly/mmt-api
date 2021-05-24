@@ -28,8 +28,14 @@ namespace MMTApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<DeliveryService>();
             DataContext.ConnectionString=Configuration.GetConnectionString("DefaultConnection");
+           
+            services.AddSingleton<DataContext>();
+            services.AddSingleton<DeliveryService>();
+            services.AddSingleton<CustomerService>();
+            services.AddSingleton<OrderItemsService>();
+            services.AddSingleton<ProductService>();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

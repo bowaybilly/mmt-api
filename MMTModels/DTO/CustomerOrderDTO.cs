@@ -5,7 +5,7 @@ namespace MMTModels
 
     public class OrderDeliveryDTO
     {
-        public CustomerResponseDTO Customer { get; set; }
+        public CustomerOrderResponseDTO Customer { get; set; }
         public OrdersDTO Order { get; set; }
     }
 

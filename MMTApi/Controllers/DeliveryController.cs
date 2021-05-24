@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using MMTApi.Infrastructure;
+using MMTApi.Services;
 using MMTModels;
 using Newtonsoft.Json;
 using System;
@@ -17,39 +18,34 @@ namespace MMTApi.Controllers
     {
         private readonly ILogger<DeliveryController> _logger;
         private readonly IConfiguration configuration;
+        private readonly CustomerService customerService;
 
-        public DeliveryController(ILogger<DeliveryController> logger,IConfiguration configuration)
+        public DeliveryController(ILogger<DeliveryController> logger,
+            IConfiguration configuration, CustomerService customerService)
         {
             //Request can be logged for production failures debugging
             _logger = logger;
             this.configuration = configuration;
+            this.customerService = customerService;
         }
 
         [HttpPost("Delivery")]
-        public async Task<ActionResult<OrderDeliveryDTO>> PostAsync([FromBody] CustomerRequestDTO customerDTO)
+        public async Task<ActionResult<OrderDeliveryDTO>> PostAsync([FromBody] CustomerOrderRequestDTO customerDTO)
         {
             try
             {
                 using (var ctx = new DataContext())
                 {
-                    //read token from configuration file 
-                    var token = configuration.GetSection("ApiToken");
-                    // form url for getting customer information
-                    string customerUrl = $"{token}&email={customerDTO.Email}";
-                    //HttpClient can be injected in as a service via  the services.AddHttpClient() in startup configureServices method
-                    HttpClient httpClient = new HttpClient();
-                    Customer customer = default(Customer);
-                    var response = await httpClient.GetAsync(customerUrl);
+                    //get customer
+                    Customer customer = await customerService.GetCustomerAsync(customerDTO);
                     //Where the email address supplied is not a valid customer in the system, the API will return a 404 status
-                    if (response.StatusCode != System.Net.HttpStatusCode.OK) return NotFound(customerDTO);
-
-                    customer = JsonConvert.DeserializeObject<Customer>(await response.Content.ReadAsStringAsync());
+                    if (customer == null) return NotFound(customerDTO);
                     //order should display the latest order item
                     var order = ctx.Orders.Where(x => x.CustomerID == customer.customerId).OrderByDescending(x => x.OrderDate).FirstOrDefault();
                     //customer has no order return their name and a succeful report
                     if (order == null) return Ok(new OrderDeliveryDTO()
                     {
-                        Customer = new CustomerResponseDTO() { FirstName = customer.FirstName, LastName = customer.LastName },
+                        Customer = new CustomerOrderResponseDTO() { FirstName = customer.FirstName, LastName = customer.LastName },
                         Order = null
                     });
                     //get order items can  be fetched from an OrderItemsService class
@@ -63,11 +59,10 @@ namespace MMTApi.Controllers
                         .Select(y => y.ProductName.Contains("contains a gift") ? "Gift" : y.ProductName)
                         .FirstOrDefault()
                     }).ToArray();
-
-                    return Ok(new OrderDeliveryDTO()
+                    var oderDeliverDto = new OrderDeliveryDTO()
                     {
                         //Customer property can use AutoMapper to mapp properties
-                        Customer = new CustomerResponseDTO() { FirstName = customer.FirstName, LastName = customer.LastName },
+                        Customer = new CustomerOrderResponseDTO() { FirstName = customer.FirstName, LastName = customer.LastName },
                         Order = new OrdersDTO()
                         {
                             //customer address can be an override of the ToString() methodin in the customer class
@@ -78,7 +73,8 @@ namespace MMTApi.Controllers
                             OrderNumber = order.OrderID
                         }
 
-                    });
+                    };
+                    return Ok(oderDeliverDto);
                 }
             }
             catch (Exception)
@@ -88,7 +84,6 @@ namespace MMTApi.Controllers
             }
         }
 
-       
+
     }
 }
- 
