@@ -36,7 +36,8 @@ namespace MMTApi.Controllers
             {
                 using (var ctx = new DataContext())
                 {
-                    //get customer
+                    _logger.LogInformation("Customer order delivery requested");
+                        //get customer
                     Customer customer = await customerService.GetCustomerAsync(customerDTO);
                     //Where the email address supplied is not a valid customer in the system, the API will return a 404 status
                     if (customer == null) return NotFound(customerDTO);
@@ -79,7 +80,7 @@ namespace MMTApi.Controllers
             }
             catch (Exception)
             {
-
+                _logger.LogInformation("Failed loading customer order delivery");
                 return StatusCode(500);
             }
         }
