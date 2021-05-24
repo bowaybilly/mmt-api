@@ -26,9 +26,10 @@ namespace MMTModels
     }
     public class CustomerOrderRequestDTO
     {
-        
+        [Required(ErrorMessage ="Email required")]
         public string Email { get; set; }
-        public string customerId { get; set; }
+        [Required(ErrorMessage ="Customer Id required")]
+        public string CustomerId { get; set; }
     }
 
 }
