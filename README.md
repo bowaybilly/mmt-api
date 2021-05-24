@@ -12,5 +12,5 @@ If I had more time the changes I might make;
 
 ## Before code can be deployed to production environment:
 
-1.  I will remove the hard coded Authentication token and save it in a database or production environment variable:
-2.  I will also remove the hard coded connection string and save it in an azure vault or production environmeent:
+1.  I will remove the hard coded Authentication token and save it in a database or production environment variable
+2.  I will also remove the hard coded connection string and save it in an azure vault or production environmeent
