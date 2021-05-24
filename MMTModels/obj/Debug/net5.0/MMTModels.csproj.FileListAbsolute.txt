@@ -1,0 +1,12 @@
+D:\test\MMTDigital Api\MMTModels\bin\Debug\net5.0\MMTModels.deps.json
+D:\test\MMTDigital Api\MMTModels\bin\Debug\net5.0\MMTModels.dll
+D:\test\MMTDigital Api\MMTModels\bin\Debug\net5.0\ref\MMTModels.dll
+D:\test\MMTDigital Api\MMTModels\bin\Debug\net5.0\MMTModels.pdb
+D:\test\MMTDigital Api\MMTModels\obj\Debug\net5.0\MMTModels.csprojAssemblyReference.cache
+D:\test\MMTDigital Api\MMTModels\obj\Debug\net5.0\MMTModels.GeneratedMSBuildEditorConfig.editorconfig
+D:\test\MMTDigital Api\MMTModels\obj\Debug\net5.0\MMTModels.AssemblyInfoInputs.cache
+D:\test\MMTDigital Api\MMTModels\obj\Debug\net5.0\MMTModels.AssemblyInfo.cs
+D:\test\MMTDigital Api\MMTModels\obj\Debug\net5.0\MMTModels.csproj.CoreCompileInputs.cache
+D:\test\MMTDigital Api\MMTModels\obj\Debug\net5.0\MMTModels.dll
+D:\test\MMTDigital Api\MMTModels\obj\Debug\net5.0\ref\MMTModels.dll
+D:\test\MMTDigital Api\MMTModels\obj\Debug\net5.0\MMTModels.pdb
