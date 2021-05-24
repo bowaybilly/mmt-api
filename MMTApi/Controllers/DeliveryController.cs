@@ -28,17 +28,13 @@ namespace MMTApi.Controllers
         [HttpPost("Delivery")]
         public async Task<ActionResult<OrderDeliveryDTO>> PostAsync([FromBody] CustomerRequestDTO customerDTO)
         {
-            return await GetDeliveryServicesAsync(customerDTO);
-        }
-
-        private async Task<ActionResult<OrderDeliveryDTO>> GetDeliveryServicesAsync(CustomerRequestDTO customerDTO)
-        {
             try
             {
                 using (var ctx = new DataContext())
                 {
+                    //read token from configuration file 
                     var token = configuration.GetSection("ApiToken");
-                    // base url and code can be stored in configuration file for development and ad production
+                    // form url for getting customer information
                     string customerUrl = $"{token}&email={customerDTO.Email}";
                     //HttpClient can be injected in as a service via  the services.AddHttpClient() in startup configureServices method
                     HttpClient httpClient = new HttpClient();
@@ -49,28 +45,25 @@ namespace MMTApi.Controllers
 
                     customer = JsonConvert.DeserializeObject<Customer>(await response.Content.ReadAsStringAsync());
                     //order should display the latest order item
-                    var order = ctx.Orders.Where(x => x.CustomerID == customer.customerId).OrderByDescending(x => x.OrderID).FirstOrDefault();
-                    //invalid request
-                    if (order == null) return new OrderDeliveryDTO()
+                    var order = ctx.Orders.Where(x => x.CustomerID == customer.customerId).OrderByDescending(x => x.OrderDate).FirstOrDefault();
+                    //customer has no order return their name and a succeful report
+                    if (order == null) return Ok(new OrderDeliveryDTO()
                     {
-                        //Customer property can use AutoMapper to mapp properties
                         Customer = new CustomerResponseDTO() { FirstName = customer.FirstName, LastName = customer.LastName },
                         Order = null
-                    };
-                    var oi = ctx.OrderItems.AsEnumerable().Where(x => x.OrderID == order.OrderID).Select(x => new OrderitemDTO()
+                    });
+                    //get order items can  be fetched from an OrderItemsService class
+                    var orderItems = ctx.OrderItems.AsEnumerable().Where(x => x.OrderID == order.OrderID).Select(x => new OrderitemDTO()
                     {
                         PriceEach = x.Price,
                         Quantity = x.Quantity,
+                        //Products can be fetched from a ProductService class
                         Product = ctx.Products
                         .Where(y => y.ProductID == x.ProductID)
                         .Select(y => y.ProductName.Contains("contains a gift") ? "Gift" : y.ProductName)
                         .FirstOrDefault()
                     }).ToArray();
 
-
-                    //get customer info
-
-                    //The order data should be the most recent order placed by the customer(for clarity, in this case “most recent” means the order with the latest order date, even if that order date is in the future).
                     return Ok(new OrderDeliveryDTO()
                     {
                         //Customer property can use AutoMapper to mapp properties
@@ -81,7 +74,7 @@ namespace MMTApi.Controllers
                             DeliveryAddress = $"{customer.FirstName} {customer.LastName} {customer.HouseNumber} {customer.Street} {customer.Postcode} {customer.Town}",
                             DeliveryExpected = order.DeliveryExpected,
                             OrderDate = order.OrderDate,
-                            OrderItems = oi,
+                            OrderItems = orderItems,
                             OrderNumber = order.OrderID
                         }
 
@@ -91,8 +84,11 @@ namespace MMTApi.Controllers
             catch (Exception)
             {
 
-                return  StatusCode(500);
+                return StatusCode(500);
             }
         }
+
+       
     }
 }
+ 

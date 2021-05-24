@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using MMTApi.Infrastructure;
 using MMTApi.Services;
 using System;
 using System.Collections.Generic;
@@ -28,6 +29,7 @@ namespace MMTApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<DeliveryService>();
+            DataContext.ConnectionString=Configuration.GetConnectionString("DefaultConnection");
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

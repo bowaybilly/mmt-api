@@ -5507,25 +5507,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\antho\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\BobbieA\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\test\\MMTDigital Api\\MMTApi\\MMTApi.csproj",
+      "projectUniqueName": "C:\\Users\\BobbieA\\Documents\\Test work\\mmt\\MMTApi\\MMTApi.csproj",
       "projectName": "MMTApi",
-      "projectPath": "D:\\test\\MMTDigital Api\\MMTApi\\MMTApi.csproj",
-      "packagesPath": "C:\\Users\\antho\\.nuget\\packages\\",
-      "outputPath": "D:\\test\\MMTDigital Api\\MMTApi\\obj\\",
+      "projectPath": "C:\\Users\\BobbieA\\Documents\\Test work\\mmt\\MMTApi\\MMTApi.csproj",
+      "packagesPath": "C:\\Users\\BobbieA\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\BobbieA\\Documents\\Test work\\mmt\\MMTApi\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\antho\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\BobbieA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -5538,8 +5533,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "D:\\test\\MMTDigital Api\\MMTModels\\MMTModels.csproj": {
-              "projectPath": "D:\\test\\MMTDigital Api\\MMTModels\\MMTModels.csproj"
+            "C:\\Users\\BobbieA\\Documents\\Test work\\mmt\\MMTModels\\MMTModels.csproj": {
+              "projectPath": "C:\\Users\\BobbieA\\Documents\\Test work\\mmt\\MMTModels\\MMTModels.csproj"
             }
           }
         }

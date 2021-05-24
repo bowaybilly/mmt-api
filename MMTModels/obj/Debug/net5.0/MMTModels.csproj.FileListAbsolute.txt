@@ -10,3 +10,15 @@ D:\test\MMTDigital Api\MMTModels\obj\Debug\net5.0\MMTModels.csproj.CoreCompileIn
 D:\test\MMTDigital Api\MMTModels\obj\Debug\net5.0\MMTModels.dll
 D:\test\MMTDigital Api\MMTModels\obj\Debug\net5.0\ref\MMTModels.dll
 D:\test\MMTDigital Api\MMTModels\obj\Debug\net5.0\MMTModels.pdb
+C:\Users\BobbieA\Documents\Test work\mmt\MMTModels\bin\Debug\net5.0\MMTModels.deps.json
+C:\Users\BobbieA\Documents\Test work\mmt\MMTModels\bin\Debug\net5.0\MMTModels.dll
+C:\Users\BobbieA\Documents\Test work\mmt\MMTModels\bin\Debug\net5.0\ref\MMTModels.dll
+C:\Users\BobbieA\Documents\Test work\mmt\MMTModels\bin\Debug\net5.0\MMTModels.pdb
+C:\Users\BobbieA\Documents\Test work\mmt\MMTModels\obj\Debug\net5.0\MMTModels.csprojAssemblyReference.cache
+C:\Users\BobbieA\Documents\Test work\mmt\MMTModels\obj\Debug\net5.0\MMTModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BobbieA\Documents\Test work\mmt\MMTModels\obj\Debug\net5.0\MMTModels.AssemblyInfoInputs.cache
+C:\Users\BobbieA\Documents\Test work\mmt\MMTModels\obj\Debug\net5.0\MMTModels.AssemblyInfo.cs
+C:\Users\BobbieA\Documents\Test work\mmt\MMTModels\obj\Debug\net5.0\MMTModels.csproj.CoreCompileInputs.cache
+C:\Users\BobbieA\Documents\Test work\mmt\MMTModels\obj\Debug\net5.0\MMTModels.dll
+C:\Users\BobbieA\Documents\Test work\mmt\MMTModels\obj\Debug\net5.0\ref\MMTModels.dll
+C:\Users\BobbieA\Documents\Test work\mmt\MMTModels\obj\Debug\net5.0\MMTModels.pdb

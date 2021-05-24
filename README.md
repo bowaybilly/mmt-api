@@ -12,5 +12,5 @@ If I had more time the changes I might make;
 
 ## Before code can be deployed to production environment:
 
-1.  I will remove Authentication token from application.Production.json file and save it production environment variable or an azure vault
+1.  I will remove Authentication token from appsettings.Production.json file and save it production environment variable or an azure vault
 2.  I will also remove the hard coded connection string and save it in an azure vault or production environment variable
